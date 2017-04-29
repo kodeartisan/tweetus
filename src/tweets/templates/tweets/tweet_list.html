@@ -1,0 +1,8 @@
+{% for tweet in object_list %}
+	{{ tweet.content }}
+	{{ tweet.user }}
+	{{ tweet.timestamp|timesince }}
+{% empty %}
+	<p>No tweets yet.</p>
+
+{% endfor %}
